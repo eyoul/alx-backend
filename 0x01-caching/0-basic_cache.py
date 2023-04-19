@@ -6,7 +6,7 @@
 from base_caching import BaseCaching
 
 
-class BasicCache(BaseCaching): 
+class BasicCache(BaseCaching):
     """ - dictionary from the parent class BaseCaching
     """
     def put(self, key, item):
