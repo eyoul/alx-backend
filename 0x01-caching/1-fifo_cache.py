@@ -6,11 +6,12 @@
 from collections import OrderedDict
 from base_caching import BaseCaching
 
+
 class FIFOCache(BaseCaching):
-    """
+    """FIFOCache that inherits from BaseCaching
     """
     def __init__(self):
-        """ cache initalization 
+        """ cache initalization
         """
         super().__init__()
         self.cache_data = OrderedDict()
@@ -24,7 +25,7 @@ class FIFOCache(BaseCaching):
         if len(self.cache_data) > BaseCaching.MAX_ITEMS:
             first_key, _ = self.cache_data.popitem(False)
             print("DISCARD: ", first_key)
-    
+
     def get(self, key):
         """ Return an Item by key
         """
