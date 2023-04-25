@@ -23,11 +23,13 @@ def get_locale() -> str:
     """Use the _ or gettext function
        to parametrize your templates
     """
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
 @app.route('/')
 def get_index() -> str:
+    """The home/index page.
+    """
     return render_template('3-index.html')
 
 
