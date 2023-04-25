@@ -7,6 +7,8 @@ from flask import render_template, request
 
 
 class Config:
+    """Flask Babel configuration.
+    """
     LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
