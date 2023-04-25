@@ -22,9 +22,9 @@ babel = Babel(app)
 
 
 @app.route('/')
-def hello(name=None) -> str:
+def hello() -> str:
 
-    return render_template('1-index.html', name=name)
+    return render_template('1-index.html')
 
 
 if __name__ == '__main__':
