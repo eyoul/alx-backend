@@ -22,8 +22,7 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale() -> str:
-    """Use the _ or gettext function
-       to parametrize your templates
+    """ _ or gettext function to parametrize your templates
     """
     return request.accept_languages.best_match(app.config["LANGUAGES"])
 
