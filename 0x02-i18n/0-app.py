@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+"""Basic Flask app
+   First you will setup a basic Flask app
+"""
 from flask import Flask
 from flask import render_template
 
