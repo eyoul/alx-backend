@@ -20,7 +20,7 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale() -> str:
-    """locale by passing the locale=fr parameter to your app URLs.
+    """Retrieves the locale for a web page.
     """
     queries = request.query_string.decode('utf-8').split('&')
     query_table = dict(map(
