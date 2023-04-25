@@ -46,10 +46,12 @@ def before_request() -> None:
 
 @babel.localeselector
 def get_locale() -> str:
+    """Retrieves the locale for a web page.
+    """
     locale = request.args.get('locale', '')
     if locale in app.config["LANGUAGES"]:
         return locale
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
 @app.route('/')
