@@ -27,7 +27,7 @@ users = {
 }
 
 
-def get_user () -> Union[Dict, None]:
+def get_user() -> Union[Dict, None]:
     login_id = request.args.get('login_as')
     if login_id:
         return users.get(int(login_id))
@@ -53,8 +53,6 @@ def get_locale() -> str:
 @app.route('/')
 def get_index() -> str:
     return render_template('5-index.html')
-
-
 
 
 if __name__ == '__main__':
