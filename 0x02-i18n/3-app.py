@@ -7,7 +7,7 @@ from flask import render_template, request
 
 
 class Config:
-    LANGUAGES = ["en", "fr" ]
+    LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
@@ -24,11 +24,10 @@ def get_locale() -> str:
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
+
 @app.route('/')
 def get_index() -> str:
     return render_template('3-index.html')
-
-
 
 
 if __name__ == '__main__':
