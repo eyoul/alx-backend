@@ -41,10 +41,6 @@ def before_request() -> None:
 @babel.localeselector
 def get_locale() -> str:
     """function to use a user’s preferred local
-        Locale from URL parameters
-        Locale from user settings
-        Locale from request header
-        Default locale
     """
     locale = request.args.get('locale', '')
     if locale in app.config["LANGUAGES"]:
