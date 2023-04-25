@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+"""Mock logging in
+"""
 from flask import Flask
 from flask_babel import Babel
 from flask import render_template, request, g
@@ -31,6 +34,8 @@ def get_user () -> Union[Dict, None]:
 
 @app.before_request
 def before_request() -> None:
+    """user login system is outside the scope of this project
+    """
     user = get_user()
     g.user = user
 
