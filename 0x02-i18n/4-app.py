@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+""" Force locale with URL parameter
+"""
 from flask import Flask
 from flask_babel import Babel
 from flask import render_template, request
@@ -16,6 +19,9 @@ babel = Babel(app)
 
 @babel.localeselector
 def get_locale() -> str:
+    """you will implement a way to force a particular
+       locale by passing the locale=fr parameter to your app’s URLs.
+    """
     queries = request.query_string.decode('utf-8').split('&')
     query_table = dict(map(
         lambda x: (x if '=' in x else '{}='.format(x)).split('='),
