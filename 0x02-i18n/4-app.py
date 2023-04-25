@@ -31,11 +31,13 @@ def get_locale() -> str:
     if 'locale' in query_table:
         if query_table['locale'] in app.config["LANGUAGES"]:
             return query_table['locale']
-    return request.accept_languages.best_match(app.config['LANGUAGES'])
+    return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
 @app.route('/')
 def get_index() -> str:
+    """The home/index page.
+    """
     return render_template('4-index.html')
 
 
