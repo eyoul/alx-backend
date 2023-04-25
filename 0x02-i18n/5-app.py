@@ -8,7 +8,9 @@ from typing import Union, Dict
 
 
 class Config:
-    LANGUAGES = ["en", "fr" ]
+    """Represents a Flask Babel configuration.
+    """
+    LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
@@ -46,6 +48,7 @@ def get_locale() -> str:
     if locale in app.config["LANGUAGES"]:
         return locale
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
 
 @app.route('/')
 def get_index() -> str:
