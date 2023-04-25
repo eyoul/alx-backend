@@ -8,7 +8,7 @@ from typing import Union, Dict
 
 
 class Config:
-    LANGUAGES = ["en", "fr" ]
+    LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
@@ -59,9 +59,9 @@ def get_locale() -> str:
 
 @app.route('/')
 def get_index() -> str:
+    """The home/index page.
+    """
     return render_template('6-index.html')
-
-
 
 
 if __name__ == '__main__':
