@@ -8,7 +8,7 @@ class Config:
     """get_locale function with the
        babel.localeselector decorator.
     """
-    LANGUAGES = ["en", "fr" ]
+    LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE = "en"
     BABEL_DEFAULT_TIMEZONE = "UTC"
 
@@ -20,8 +20,8 @@ babel = Babel(app)
 
 
 @app.route('/')
-def hello(name=None) -> str:
-    return render_template('2-index.html', name=name)
+def hello() -> str:
+    return render_template('2-index.html')
 
 
 @babel.localeselector
@@ -30,6 +30,7 @@ def get_locale():
        with our supported languages.
     """
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
