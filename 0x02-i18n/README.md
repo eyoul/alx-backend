@@ -67,7 +67,7 @@ Read or watch:
   + In your `get_locale` function, detect if the incoming request contains `locale` argument and if its value is a supported locale, return it. If not or if the parameter is not present, resort to the previous default behavior.
   + You should be able to test different translations by visiting `http://127.0.0.1:5000?locale=[fr|en]`.
   + Visiting [`http://127.0.0.1:5000/?locale=fr`](http://127.0.0.1:5000/?locale=fr) should display this level 1 heading:<br/>
-    ![Hello World! in French](images/task_4.png)
+    ![Hello World! in French](Images/task_4.png)
 
 + [x] 5. **Mock logging in**
   + Copy [4-app.py](4-app.py) into [5-app.py](5-app.py) and [templates/4-index.html](templates/4-index.html) into [templates/5-index.html](templates/5-index.html).
@@ -89,9 +89,9 @@ Read or watch:
     | logged_in_as | "You are logged in as %(username)s." | "Vous êtes connecté en tant que %(username)s." |
     | not_logged_in | "You are not logged in." | "Vous n'êtes pas connecté." |
   + Visiting [http://127.0.0.1:5000/](http://127.0.0.1:5000/) in your browser should display this:<br/>
-    ![Hello World! in English with a logged out message](images/task_5_1.png)
+    ![Hello World! in English with a logged out message](Images/task_5_1.png)
   + Visiting [http://127.0.0.1:5000/?login_as=2](http://127.0.0.1:5000/?login_as=2) in your browser should display this:<br/>
-    ![Hello World! in English with a logged in message](images/task_5_2.png)
+    ![Hello World! in English with a logged in message](Images/task_5_2.png)
 
 + [x] 6. **Use user locale**
   + Copy [5-app.py](5-app.py) into [6-app.py](6-app.py) and [templates/5-index.html](templates/5-index.html) into [templates/6-index.html](templates/6-index.html).
@@ -102,7 +102,7 @@ Read or watch:
     3. Locale from request header.
     4. Default locale.
   + Test by logging in as different users.<br/>
-    ![Hello World! in French with a logged in message](images/task_6_1.png)
+    ![Hello World! in French with a logged in message](Images/task_6_1.png)
 
 + [x] 7. **Infer appropriate time zone**
   + Copy [6-app.py](6-app.py) into [7-app.py](7-app.py) and [templates/6-index.html](templates/6-index.html) into [templates/7-index.html](templates/7-index.html).
@@ -122,6 +122,6 @@ Read or watch:
     |:-|:-|:-|
     | current_time_is | "The current time is %(current_time)s." | "Nous sommes le %(current_time)s." |
   + Displaying the time in French looks like this:<br/>
-    ![Hello World! with a logged in message and the current time in French](images/task_8_1.png)
+    ![Hello World! with a logged in message and the current time in French](Images/task_8_1.png)
   + Displaying the time in English looks like this:<br/>
-    ![Hello World! with a logged in message and the current time in English](images/task_8_2.png)
+    ![Hello World! with a logged in message and the current time in English](Images/task_8_2.png)
