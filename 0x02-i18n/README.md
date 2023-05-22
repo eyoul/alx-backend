@@ -125,3 +125,8 @@ Read or watch:
     ![Hello World! with a logged in message and the current time in French](Images/task_8_1.png)
   + Displaying the time in English looks like this:<br/>
     ![Hello World! with a logged in message and the current time in English](Images/task_8_2.png)
+
+
+### Authors &copy;
+
+- Eyoul Shimeles
